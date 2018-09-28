@@ -1,0 +1,60 @@
+$( document ).ready(function() {
+	$('a[href="mailto:info@masterfood.ru"], a[href="mailto:office@masterfood.ru"]').click(function() {
+	    yaCounter17381359.reachGoal('napisat_nam');
+	    ga('send', 'pageview', '/pismo');
+	    console.log('/pismo');
+    });
+    $('a[href^="tel:"],a[href^="tel:"]').click(function() {
+	    yaCounter17381359.reachGoal('nabrat_nomer');
+	    ga('send', 'pageview', '/telefon');
+	    console.log('/telefon');
+    });
+
+    $('.hd_callback, .ft_callback').click(function() {
+    	console.log('clb');
+    	setTimeout(function(){
+    		$('#dscallback-form').submit(function() {
+    			yaCounter17381359.reachGoal('otpravit');
+			    ga('send', 'pageview', '/otpravka');
+			    console.log('/otpravka');
+		    });
+    	},500);
+    });
+
+	$(document).on('click', 'a[data-dspopup-id="dsorder"]',function(){
+	 	yaCounter17381359.reachGoal('zakaz_uslugi');
+	 	ga('send', 'pageview','/zakaz_uslugi');
+	 	console.log('zakaz_uslugi');
+		setTimeout(function(){
+    		$('#dsorder-form').submit(function() {
+    			yaCounter17381359.reachGoal('usluga_otp');
+			    ga('send', 'pageview', '/usluga_otp');
+			    console.log('usluga_otp');
+		    });
+    	},500);
+	 });
+
+
+
+
+	$(document).on('click', 'a[href="files/menu/Menu_stolovoj_2017.doc"]',function(){
+	 	yaCounter17381359.reachGoal('menu_stolovoi');
+	 	ga('send', 'pageview','/menu_stolovoi');
+	 	console.log('menu_stolovoi');
+	 });
+
+	$(document).on('click', 'a[href="files/menu/Banketnoe_menu_2017.doc"]',function(){
+	 	yaCounter17381359.reachGoal('menu_bank');
+	 	ga('send', 'pageview','/menu_bank');
+	 	console.log('menu_stolovoi');
+	 });
+
+
+
+    
+});
+function usluga_otp(){
+	 	yaCounter17381359.reachGoal('usluga_otp');
+	 	ga('send', 'pageview','/usluga_otp');
+	 	console.log('usluga_otp');
+}

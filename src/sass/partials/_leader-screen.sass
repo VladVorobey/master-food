@@ -1,0 +1,125 @@
+.leader-screen
+	position: relative
+	padding: 60px 0 135px
+	background: url("../img/bg-form-bottom.png") bottom repeat-x
+	+r(992)
+		padding: 60px 0
+	+r(768)
+		padding: 40px 0 60px
+	.title
+		margin-bottom: 90px
+		+r(992)
+			margin-bottom: 40px
+		+r(768)
+			margin-bottom: 30px
+	&__content
+		display: flex
+		flex-wrap: wrap
+	&__item
+		width: 33%
+		padding: 20px 40px
+		margin-bottom: 108px
+		+r(992)
+			width: 50%
+			padding: 0
+			margin-bottom: 50px
+		+r(768)
+			margin-bottom: 30px
+		+r(576)
+			width: 100%
+			margin-bottom: 10px
+			br
+				display: none
+		img
+			max-height: 127px
+			+r(992)
+				max-height: 90px
+				margin-bottom: 0
+			+r(768)
+				max-height: 80px
+				max-width: 130px
+			+r(576)
+				max-height: 60px
+		p
+			text-align: center
+			text-transform: uppercase
+			font-family: $default-font
+			font-weight: 600
+			font-size: 16px
+			color: $trout
+			line-height: 1.5
+			+r(992)
+				font-size: 14px
+			+r(768)
+				font-size: 13px
+		.img__wrapper
+			height: 120px
+			align-items: center
+			display: flex
+			justify-content: center
+			margin-bottom: 10px
+			+r(992)
+				height: 90px
+			+r(768)
+				height: 80px
+			+r(576)
+				height: 60px
+		&:nth-child(n+4)
+			.img__wrapper
+				margin-bottom: 50px
+				+r(992)
+					margin-bottom: 10px
+		&:nth-last-child(-n+3)
+			margin-bottom: 0
+.we-offer
+	position: relative
+	background: url("../img/bg-leader-screen.jpg") no-repeat center
+	background-size: cover
+	padding: 62px 0 43px
+	+r(768)
+		padding: 40px 0
+	.title
+		margin-bottom: 65px
+		+r(992)
+			margin-bottom: 40px
+		+r(768)
+			margin-bottom: 30px
+	&__content
+		display: flex
+		flex-wrap: wrap
+
+	&__item
+		align-items: center
+		justify-content: center
+		text-align: center
+		img
+			margin-bottom: 23px
+			width: 100%
+			+r(578)
+				width: 60%
+				margin-bottom: 15px
+			+r(460)
+				width: 100%
+				margin-bottom: 10px
+		p
+			text-align: center
+			font-family: $default-font
+			font-weight: 600
+			font-size: 18px
+			color: $white
+			margin-bottom: 36px
+			+r(768)
+				font-size: 16px
+				margin-bottom: 25px
+			+r(576)
+				font-size: 13px
+				margin-bottom: 15px
+		+r(1200)
+			br
+				display: none
+	.dish
+		position: absolute
+		top: -65px
+		right: 75px
+		+r(768)
+			display: none

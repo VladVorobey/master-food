@@ -1,0 +1,75 @@
+.gallery
+	position: relative
+	background: $trout
+	padding: 40px 0 32px
+	+r(768)
+		padding: 40px 0
+	.title
+		margin-bottom: 50px
+		+r(768)
+			margin-bottom: 30px
+	.slider-for
+		margin-bottom: 50px
+	.slider-nav
+		position: relative
+		text-align: center
+		.info
+			display: inline-block
+			max-width: 430px
+			margin: 0 auto
+			strong
+				font-family: $default-font
+				font-weight: 600
+				font-size: 24px
+				color: $white
+				margin-bottom: 13px
+				display: block
+				overflow: hidden
+				text-overflow: ellipsis
+				white-space: nowrap
+				+r(768)
+					font-size: 20px
+				+r(576)
+					font-size: 18px
+			p
+				font-family: $default-font
+				font-weight: 400
+				font-size: 16px
+				color: $white
+				line-height: 1.5
+				+r(768)
+					font-size: 14px
+				+r(576)
+					font-size: 13px
+	.slick-arrow
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		font-size: 0
+		width: 65px
+		height: 35px
+		z-index: 1
+		+r(576)
+			top: -20px
+	.slick-prev
+		background: url("../img/left-arrow.svg") no-repeat center
+		left: 110px
+		+r(992)
+			left: 0
+		+r(768)
+			left: -30px
+		+r(576)
+			left: 0
+		&:hover
+			background: url("../img/left-arrow-green.svg") no-repeat center
+	.slick-next
+		background: url("../img/right-arrow.svg") no-repeat center
+		right: 110px
+		+r(992)
+			right: 0
+		+r(768)
+			right: -30px
+		+r(576)
+			right: 0
+		&:hover
+			background: url("../img/right-arrow-green.svg") no-repeat center

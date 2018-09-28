@@ -1,0 +1,87 @@
+.trasted
+	position: relative
+	background: $chelsea-cucumber url("../img/bg-form-bottom.png") repeat-x bottom
+	padding: 50px 0 60px
+	+r(768)
+		padding: 40px 0
+	.title
+		margin-bottom: 60px
+		+r(768)
+			margin-bottom: 30px
+	&-slider
+		position: relative
+	.slide
+		padding: 50px 0 50px
+		position: relative
+		a
+			background: $white
+			border-radius: 8px
+			height: 190px
+			display: flex
+			justify-content: center
+			align-items: center
+	.slick-slide
+		padding-bottom: 65px
+		margin: 0 15px
+		&:nth-of-type(odd)
+			a
+				&::before
+					content: ''
+					width: 40px
+					height: 50px
+					background: $white
+					position: absolute
+					border-radius: 18px 18px 0 0
+					left: 45%
+					top: 0
+					transform: translateX(-50%)
+				&::after
+					content: ''
+					width: 12px
+					height: 12px
+					position: absolute
+					background: $chelsea-cucumber
+					border-radius: 50%
+					left: 45%
+					transform: translateX(-50%)
+					top: 15px
+		&:nth-of-type(even)
+			a
+				&::before
+					content: ''
+					width: 40px
+					height: 50px
+					background: $white
+					position: absolute
+					border-radius: 0 0 18px 18px
+					left: 45%
+					bottom: 0
+					transform: translateX(-50%)
+				&::after
+					content: ''
+					width: 12px
+					height: 12px
+					position: absolute
+					background: $chelsea-cucumber
+					border-radius: 50%
+					left: 45%
+					transform: translateX(-50%)
+					bottom: 15px
+	.slick-arrow
+		position: absolute
+		bottom: 0
+		left: 50%
+		font-size: 0
+		width: 65px
+		height: 35px
+		z-index: 1
+	.slick-prev
+		background: url("../img/left-arrow.svg") no-repeat center
+		transform: translateX(-70px)
+		&:hover
+			background: url("../img/left-arrow-green.svg") no-repeat center
+	.slick-next
+		background: url("../img/right-arrow.svg") no-repeat center
+		transform: translateX(5px)
+		&:hover
+			background: url("../img/right-arrow-green.svg") no-repeat center

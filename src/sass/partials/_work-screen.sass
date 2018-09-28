@@ -1,0 +1,165 @@
+.work
+	position: relative
+	padding: 90px 0 102px
+	background: url("../img/work-bg.jpg") no-repeat top
+	background-size: cover
+	+r(992)
+		padding: 60px 0
+	+r(768)
+		padding: 40px 0
+	.title
+		margin-bottom: 75px
+		+r(768)
+			margin-bottom: 30px
+	&__wrapper
+		position: relative
+		background: url("../img/work-center.png") center no-repeat
+		min-height: 660px
+		width: 100%
+		z-index: 1
+		+r(992)
+			background: none
+			min-height: auto
+	.bg__image
+		display: none
+		+r(992)
+			display: block
+			position: absolute
+			right: 0
+			top: 30%
+		+r(768)
+			opacity: .5
+			right: -30%
+			top: 25%
+			img
+				width: 80%
+		+r(576)
+			display: none
+	&__item
+		position: absolute
+		cursor: pointer
+		+r(992)
+			position: relative
+			align-items: center
+			display: flex
+			margin-bottom: 20px
+			padding-left: 30px
+			&:nth-child(-n+5)
+				left: 0
+				text-align: left
+				&::before
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+				&:after
+					left: 5px
+					top: 50%
+					transform: translateY(-50%) rotate(-45deg)
+			&:last-child
+				margin-bottom: 30px
+		+r(576)
+			margin-bottom: 10px
+		&::before
+			content: ''
+			width: 18px
+			height: 18px
+			background: $chelsea-cucumber
+			position: absolute
+			border-radius: 50%
+		&::after
+			content: ''
+			width: 8px
+			height: 4px
+			border-bottom: 1px solid $white
+			border-left: 1px solid $white
+			position: absolute
+			transform: rotate(-45deg)
+		&:hover
+			&:before
+				background: $cardinal
+		p
+			font-family: $default-font
+			font-weight: 600
+			font-size: 16px
+			color: $shark
+			line-height: 1.7
+			+r(768)
+				font-size: 14px
+			+r(576)
+				font-size: 13px
+				br
+					display: none
+		&:nth-child(1)
+			left: 34%
+			text-align: center
+			&::before
+				bottom: -65px
+				left: 182px
+				transform: translateX(-6px)
+			&::after
+				bottom: -57px
+				left: 182px
+			+r(1200)
+				left: 30%
+		&:nth-child(2)
+			top: 31%
+			right: 3%
+			+r(1200)
+				right: -5%
+				&::before
+					left: -50px
+				&::after
+					left: -45px
+			&::before
+				left: -88px
+				top: 18px
+			&::after
+				left: -83px
+				top: 23px
+		&:nth-child(3)
+			top: 60%
+			right: 5%
+			+r(1200)
+				right: -2%
+				&::before
+					left: -45px
+				&::after
+					left: -40px
+			&::before
+				left: -88px
+				top: 20px
+			&::after
+				left: -83px
+				top: 26px
+		&:nth-child(4)
+			top: 60%
+			left: 5%
+			text-align: right
+			+r(1200)
+				left: -3%
+				&::before
+					right: -50px
+				&::after
+					right: -45px
+			&::before
+				right: -84px
+				top: 20px
+			&::after
+				right: -80px
+				top: 25px
+		&:nth-child(5)
+			top: 31%
+			left: 11%
+			text-align: right
+			+r(1200)
+				left: 4%
+				&::before
+					right: -50px
+				&::after
+					right: -45px
+			&::before
+				right: -80px
+				top: 18px
+			&::after
+				right: -75px
+				top: 25px

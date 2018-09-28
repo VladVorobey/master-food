@@ -1,0 +1,101 @@
+.footer
+	position: relative
+	background: $trout
+	padding-bottom: 1px
+	.nav__wrapper
+		background: #495159
+		color: $white
+		position: relative
+		padding-top: 35px
+		padding-bottom: 35px
+		+r(992)
+			padding: 15px 0
+	.copyright__wrapper
+		background: #495159
+		text-align: center
+		padding: 10px 0 20px
+		position: relative
+		a
+			color: $white
+			font-size: 13px
+			font-family: $default-font
+			font-weight: 400
+	.info
+		&__wrapper
+			padding-top: 53px
+			padding-bottom: 55px
+			position: relative
+			+r(992)
+				padding: 15px 0
+		&__block
+			display: flex
+			justify-content: space-between
+			+r(992)
+				flex-direction: column
+				justify-content: center
+				align-items: center
+		&__item
+			p
+				font-family: $default-font
+				font-weight: 400
+				font-size: 15px
+				color: $white
+				line-height: 1.4
+			a
+				color: $white
+				font-family: $default-font
+				font-weight: 700
+				font-size: 18px
+				&:last-child
+					font-size: 15px
+					font-weight: 400
+					text-decoration: underline
+			+r(992)
+				text-align: center
+				margin-bottom: 20px
+				br
+					display: none
+
+	.social
+		display: inline-flex
+		margin-left: 50px
+		+r(992)
+			margin: 0
+			justify-content: center
+			width: 100%
+		li
+			margin-left: 20px
+		.icon
+			font-size: 25px
+			fill: $alto
+			transition: fill .3s
+			&:hover, &:focus
+				transition: fill .3s
+				fill: $chelsea-cucumber
+	.footer_nav
+		display: inline-flex
+		margin-bottom: 0
+		width: 80%
+		+r(768)
+			position: relative
+			transform: translateX(0)
+		ul
+			display: flex
+			width: 100%
+			justify-content: space-between
+			align-items: center
+			li
+				&:first-child
+					margin-left: 0
+			a
+
+				font-family: $default-font
+				font-weight: 400
+				font-size: 15px
+				color: $white
+				transition: color .3s
+				&:hover
+					transition: color .3s
+					color: $chelsea-cucumber
+		+r(992)
+			display: none

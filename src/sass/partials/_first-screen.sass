@@ -1,0 +1,194 @@
+.first-screen
+	position: relative
+	padding-bottom: 60px
+	+r(992)
+		padding-bottom: 40px
+	&__wrapper
+		background: url("../img/bg-first-screen.jpg") center no-repeat
+		background-size: cover
+		padding-top: 28px
+		+r(768)
+			padding-top: 40px
+	&__block
+		display: flex
+		transform: translateY(50px)
+		+r(768)
+			flex-direction: column
+			transform: translateY(0)
+	&__item
+		padding: 23px 120px 30px 30px
+		margin-right: 30px
+		width: 50%
+		position: relative
+		height: auto
+		color: $white
+		display: flex
+		flex-direction: column
+		+r(992)
+			padding: 20px
+		+r(768)
+			width: 100%
+			margin-bottom: 20px
+			&:last-child
+				margin-bottom: 0
+		strong
+			font-family: $second-font
+			font-weight: 400
+			font-size: 24px
+			margin-bottom: 8px
+			display: inline-block
+			+r(768)
+				font-size: 22px
+			+r(576)
+				font-size: 18px
+		p
+			font-family: $default-font
+			font-weight: 400
+			font-size: 14px
+			line-height: 1.4
+			margin-bottom: 30px
+			+r(576)
+				font-size: 13px
+		&:nth-child(even)
+			margin-right: 0
+		&:nth-child(1)
+			background: url("../img/first-screen-item-1.png") center no-repeat
+			background-size: cover
+		&:nth-child(2)
+			background: url("../img/first-screen-item-2.png") center no-repeat
+			background-size: cover
+	h2,h3
+		text-align: center
+		margin: 0 auto
+	h2
+		font-family: $second-font
+		font-size: 36px
+		font-weight: 400
+		color: $shark
+		line-height: 1.5
+		letter-spacing: -0.01em
+		margin-bottom: 17px
+		+r(992)
+			font-size: 32px
+		+r(768)
+			font-size: 26px
+			margin-bottom: 10px
+		+r(576)
+			font-size: 20px
+			margin-bottom: 5px
+	h3
+		font-family: $default-font
+		font-size: 16px
+		font-weight: 400
+		color: $nevada
+		margin-bottom: 70px
+		+r(992)
+			margin-bottom: 30px
+		+r(576)
+			font-size: 13px
+.navigation
+	margin-bottom: 100px
+	position: relative
+	+r(768)
+		position: fixed
+		width: 100vw
+		height: 100vh
+		left: 0
+		right: 0
+		top: 0
+		transform: translateX(100vw)
+		transition: all .3s
+		z-index: 1000
+	&.active
+		transform: translateX(0)
+		transition: all .3s
+	ul
+		display: flex
+		justify-content: space-around
+		+r(992)
+			justify-content: space-between
+		+r(768)
+
+			z-index: 1000
+			position: absolute
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			background: $chelsea-cucumber
+			width: 100%
+			height: 100%
+		li
+			+r(768)
+				margin-bottom: 20px
+			&:first-child
+				margin-left: 16px
+				+r(768)
+					margin-left: 0
+			&:last-child
+				margin-right: 16px
+				+r(768)
+					margin-right: 0
+		a
+			font-family: $default-font
+			font-weight: 400
+			font-size: 15px
+			color: $trout
+			transition: color .3s
+			&:hover
+				transition: color .3s
+				color: $chelsea-cucumber
+			+r(768)
+				color: $white
+	&__button
+		z-index: 1001
+		display: none
+		width: 50px
+		min-height: 50px
+		position: fixed
+		top: 10px
+		right: 10px
+		background-color: $chelsea-cucumber
+		border-radius: 50%
+		+r(768)
+			display: block
+			&.active
+				transition: all .3s
+				.bar
+					transition: all .25s
+					background-color: transparent
+					&:before
+						transition: all .25s
+						transform: rotate(45deg)
+						top: 0
+
+					&:after
+						top: 0
+						transition: all .25s
+						transform: rotate(-45deg)
+		.bar
+			position: fixed
+			right: 25px
+			top: 32px
+			transition: all .25s
+			content: ""
+			height: 3px
+			width: 20px
+			background-color: $white
+			&:before
+				top: -8px
+				transition: all .25s
+				content: ""
+				position: absolute
+				right: -3px
+				height: 3px
+				width: 26px
+				background-color: $white
+			&:after
+				top: 8px
+				transition: all .25s
+				content: ""
+				position: absolute
+				right: -3px
+				height: 3px
+				width: 26px
+				background-color: $white

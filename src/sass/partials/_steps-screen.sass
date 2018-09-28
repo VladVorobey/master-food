@@ -1,0 +1,64 @@
+.steps-screen
+	position: relative
+	padding-top: 80px
+	padding-bottom: 80px
+	background: url("../img/steps-line.png") center no-repeat
+	background-size: cover
+	+r(992)
+		padding: 60px 0
+	+r(576)
+		padding: 40px 0
+	.title
+		margin-bottom: 130px
+		+r(992)
+			margin-bottom: 60px
+		+r(768)
+			margin-bottom: 40px
+		+r(576)
+			margin-bottom: 30px
+	&__item
+		text-align: center
+		margin-bottom: 52px
+		+r(768)
+			margin-bottom: 30px
+		+r(576)
+			margin-bottom: 20px
+		img
+			max-width: 80px
+			margin-bottom: 38px
+			position: relative
+			+r(768)
+				max-width: 60px
+				margin-bottom: 10px
+		&::before
+			content: url("../img/steps-before.svg")
+			position: absolute
+			width: 170px
+			height: 100px
+			top: 10px
+			left: 120px
+		+r(1200)
+			&:before
+				content: none
+		p
+			font-family: $default-font
+			font-weight: 600
+			font-size: 16px
+			color: $trout
+			line-height: 1.4
+			+r(768)
+				font-size: 14px
+			+r(576)
+				font-size: 13px
+	.col-md-4
+		&:nth-child(3n+2)
+			margin-top: 160px
+			.steps-screen__item
+				&:before
+					transform: rotate(20deg)
+			+r(768)
+				margin-top: 0
+		&:nth-child(2n+1)
+			.steps-screen__item
+				&:before
+					transform: rotate(-10deg)

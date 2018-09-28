@@ -1,0 +1,165 @@
+.button
+	a
+		font-size: 13px
+		font-family: $default-font
+		font-weight: 600
+		color: $white
+		background: $cardinal
+		border-radius: 23px
+		box-shadow: 5px 8.66px 15px 0 rgba(0, 0, 0, 0.05)
+		padding: 16px 25px
+		display: inline-block
+		line-height: 1
+		margin: 0
+		transition: all .3s
+		&:hover
+			background: $white
+			color: $trout
+			transition: all .3s
+			box-shadow: 5px 8.66px 15px 0 rgba(0, 0, 0, 0.3)
+			transform: translateY(1px)
+	&__info-line
+		margin-left: 65px
+		+r(576)
+			margin-left: 0
+	&__item
+		margin-top: auto
+		a
+			padding: 11px 25px
+			border: 2px solid $nevada
+			box-shadow: 5px 8.66px 15px 0 rgba(0, 0, 0, 0.05)
+			background: transparent
+			transition: all .3s
+			&:hover
+				background: $white
+				border: $white 2px solid
+				box-shadow: 5px 8.66px 15px 0 rgba(0, 0, 0, 0.05)
+				color: $trout
+				transition: all .3s
+	&__form
+		a
+			font-size: 16px
+			padding: 22px 46px
+			border-radius: 30px
+			color: $trout
+			background: $white
+			transition: all .3s
+			&:hover
+				background: $cardinal
+				color: $white
+				transition: all .3s
+				box-shadow: 5px 8.66px 15px 0 rgba(0, 0, 0, 0.3)
+				transform: translateY(1px)
+	&__dining
+		a
+			padding: 16px 30px
+			font-family: $default-font
+			font-weight: 600
+			font-size: 14px
+			color: $nevada
+			background: $pampas
+			transition: all .3s
+			&:hover
+				transition: all .3s
+				color: $white
+				background: $chelsea-cucumber
+			+r(992)
+				text-align: center
+				font-size: 13px
+		.active
+			transition: all .3s
+			color: $white
+			background: $chelsea-cucumber
+		&-content
+			transition: all .3s
+			a
+				font-size: 16px
+				padding: 17px 38px
+			+r(576)
+				text-align: center
+	&__work
+		text-align: center
+		transition: all .3s
+		a
+			font-size: 16px
+			font-family: $default-font
+			font-weight: 600
+			padding: 22px 55px
+			border-radius: 30px
+			+r(576)
+				padding: 22px 30px
+.title
+	h2
+		font-family: $second-font
+		font-size: 36px
+		font-weight: 400
+		color: $shark
+		line-height: 1.45
+		letter-spacing: -0.01em
+		margin-bottom: 17px
+		text-align: center
+		padding-top: 60px
+		position: relative
+		+r(992)
+			font-size: 32px
+			br
+				display: none
+		+r(768)
+			font-size: 26px
+
+		+r(576)
+			font-size: 20px
+		&::before
+			content: url("../img/icon.svg")
+			width: 19px
+			height: 38px
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+	&_grey
+		h2
+			color: $white
+			&::before
+				content: url("../img/icon-white.svg")
+	&_form
+		h2
+			padding-top: 0
+			margin-bottom: 15px
+			&::before
+				content: none
+.slick-dots
+	position: absolute
+	bottom: 22px
+	list-style: none
+	display: block
+	text-align: center
+	padding: 0
+	width: 100%
+	li
+		position: relative
+		display: inline-block
+		cursor: pointer
+		button
+			display: block
+			padding: 3px
+			background: none
+			outline: none
+			line-height: 0
+			font-size: 0
+			color: red
+			cursor: pointer
+			&:before
+				content: ""
+				display: block
+				height: 10px
+				width: 10px
+				box-sizing: border-box
+				border-radius: 50%
+				background: #979795
+				transition: all 0.1s ease
+			&:hover
+				&:before
+					background: #4E4E4E
+		&.slick-active button:before
+			background: #4E4E4E

@@ -1,0 +1,75 @@
+.info-line
+	position: relative
+	padding-top: 17px
+	padding-bottom: 12px
+	&__wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+r(992)
+			flex-direction: column
+			justify-content: center
+	&__logotype
+		display: flex
+		align-items: center
+		position: relative
+		height: 69px
+		+r(576)
+			flex-direction: column
+			height: auto
+		img
+			width: 104px
+			height: 69px
+		h1
+			padding-bottom: 5px
+			padding-left: 32px
+			font-weight: 400
+			font-size: 14px
+			color: $regent-gray
+			position: relative
+			max-width: 470px
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
+			+r(576)
+				white-space: normal
+				overflow: visible
+				text-align: center
+				padding-left: 0
+			br
+				display: none
+
+		&::before
+			content: ''
+			position: absolute
+			width: 1px
+			height: 40px
+			background: $chelsea-cucumber
+			left: 0
+			top: 0
+			transform: translateY(15px) translateX(120px)
+			+r(576)
+				display: none
+	&__link
+		display: flex
+		+r(576)
+			flex-direction: column
+			justify-content: center
+		&_contacts
+			display: flex
+			flex-direction: column
+			+r(576)
+				margin-bottom: 10px
+			a
+				font-size: 18px
+				color: $shark
+				font-weight: 600
+				+r(576)
+					text-align: center
+				&:last-child
+					font-size: 13px
+					font-weight: 400
+					color: $regent-gray
+					line-height: 1.4
+				&:hover
+					text-decoration: underline

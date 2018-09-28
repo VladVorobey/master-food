@@ -1,0 +1,97 @@
+.dining-room-screen
+	position: relative
+	padding-top: 80px
+	overflow-y: hidden
+	+r(992)
+		padding-top: 60px
+	+r(768)
+		padding-top: 40px
+	.title
+		margin-bottom: 58px
+	.tabs
+		margin-bottom: 82px
+		+r(992)
+			margin-bottom: 30px
+		ul
+			display: flex
+			justify-content: center
+			+r(768)
+				flex-direction: column
+				align-items: center
+			li
+				margin-right: 30px
+				+r(768)
+					margin-right: 0
+					margin-bottom: 20px
+				&:last-child
+					margin-right: 0
+		&__wrap
+			position: relative
+			width: 100%
+			&_img
+				height: auto
+				width: 50%
+				position: relative
+				+r(992)
+					display: none
+				img
+					position: absolute
+					right: 0
+					top: -75px
+					transform: translateX(-15px)
+			&_content
+				width: 55%
+				position: relative
+				left: 43%
+				background: $white
+				padding: 58px 30px 50px 55px
+				box-shadow: 12.5px 21.651px 50px 0 rgba(0, 0, 0, 0.05)
+				+r(992)
+					width: 100%
+					left: 0
+				+r(576)
+					padding: 20px 0 30px
+				h3
+					font-family: $default-font
+					font-weight: 600
+					font-size: 24px
+					color: $chelsea-cucumber
+					margin-bottom: 23px
+				p
+					color: $trout
+					margin-bottom: 24px
+					line-height: 1.5
+					&:last-of-type
+						margin-bottom: 26px
+				h4
+					color: $shark
+					font-size: 16px
+					font-family: $default-font
+					font-weight: 600
+					margin-bottom: 10px
+				ul
+					margin-bottom: 60px
+					li
+						font-family: $default-font
+						font-weight: 400
+						color: $trout
+						padding-left: 15px
+						margin-bottom: 8px
+						line-height: 1.4
+						position: relative
+						&:last-child
+							margin-bottom: 0
+						&::before
+							content: ''
+							position: absolute
+							width: 3px
+							height: 3px
+							background: $chelsea-cucumber
+							left: 2px
+							top: 10px
+	&__content
+		position: relative
+		padding-top: 75px
+		padding-bottom: 80px
+		+r(992)
+			padding: 0 0 40px

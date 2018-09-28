@@ -1,0 +1,79 @@
+.reviews-screen
+	position: relative
+	padding-top: 85px
+	background: $pampas url("../img/reviews-bg.png") no-repeat  20% 50px
+	padding-bottom: 50px
+	+r(992)
+		padding: 60px 0
+	+r(768)
+		padding: 40px 0
+		background-image: none
+	.title
+		margin-bottom: 65px
+		+r(768)
+			margin-bottom: 30px
+	.single-item
+		display: flex
+		align-items: center
+		justify-content: center
+		padding-bottom: 80px
+	.item
+		padding: 50px 80px 80px
+		text-align: center
+		+r(768)
+			padding: 30px 20px 30px
+		h3
+			font-family: $second-font
+			font-weight: 700
+			font-size: 26px
+			color: $chelsea-cucumber
+			margin-bottom: 5px
+			+r(768)
+				font-size: 20px
+			+r(576)
+				font-size: 16px
+		strong
+			font-family: $default-font
+			font-weight: 400
+			font-size: 14px
+			color: $trout
+			margin-bottom: 30px
+			display: inline-block
+			+r(768)
+				font-size: 13px
+				margin-bottom: 15px
+		p
+			font-family: $default-font
+			font-weight: 400
+			font-size: 16px
+			color: $trout
+			line-height: 1.875
+			+r(768)
+				font-size: 14px
+			+r(576)
+				font-size: 13px
+	.slick-center
+		background: $white
+	+r(1200)
+		.slick-current
+			background: $white
+	.slick-dots
+		bottom: 25px
+	.slick-arrow
+		position: absolute
+		bottom: 0
+		transform: translateY(-50%)
+		font-size: 0
+		width: 65px
+		height: 35px
+		z-index: 1
+	.slick-prev
+		background: url("../img/left-arrow-grey.svg") no-repeat center
+		left: 30%
+		&:hover
+			background: url("../img/left-arrow-grey-white.svg") no-repeat center
+	.slick-next
+		background: url("../img/right-arrow-grey.svg") no-repeat center
+		right: 30%
+		&:hover
+			background: url("../img/right-arrow-grey-white.svg") no-repeat center

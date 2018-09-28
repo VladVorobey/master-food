@@ -1,0 +1,51 @@
+.map-screen
+	position: relative
+	padding-top: 50px
+	padding-bottom: 70px
+	background: $pampas
+	+r(992)
+		padding: 60px 0
+	+r(768)
+		padding: 40px 0
+	.title
+		margin-bottom: 45px
+		+r(768)
+			margin-bottom: 15px
+	.map
+		width: 100%
+		padding-left: 100px
+		height: 500px
+		+r(992)
+			padding-left: 0
+			height: 300px
+	&__contacts
+		position: absolute
+		background: $white
+		top: 40%
+		padding: 60px 40px 90px 35px
+		+r(992)
+			position: relative
+			padding: 30px 40px
+		h3
+			font-family: $default-font
+			font-weight: 600
+			font-size: 18px
+			color: $chelsea-cucumber
+			margin-bottom: 20px
+		p
+			font-family: $default-font
+			font-weight: 400
+			font-size: 16px
+			color: $trout
+			margin-bottom: 25px
+		a
+			display: block
+			font-family: $default-font
+			font-weight: 700
+			color: $trout
+			margin-bottom: 15px
+			&:last-child
+				font-weight: 400
+				margin-bottom: 0
+			&:hover, &:focus
+				text-decoration: underline

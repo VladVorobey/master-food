@@ -1,0 +1,193 @@
+// JavaScript Document$(document).ready(function(){
+$(document).ready(function(){
+	//menu active
+	if (window.location.pathname != '/') {
+		$('ul>li>a[href$="'+window.location.pathname+'"]').parent('li').addClass('active');
+		$('ul>li>a[href$="'+window.location.pathname+'"]').parents('.navTopLevel>li').addClass('active');
+	} else { $('.linkMain').parent('li').addClass('active'); }
+
+	$('.bxslider').bxSlider({
+		useCSS: false,
+		speed: 200,
+		auto: true,
+		});  
+
+	if ( $( window ).width() > 1235 ) {
+		$('.bxslider-rev').bxSlider({
+			useCSS: false,
+			speed: 200,
+			auto: false,
+			minSlides: 3,
+			maxSlides: 3,
+			slideWidth: 300,
+			slideMargin: 30,
+			responsive: true,
+			infiniteLoop: false,
+		});
+	} else {
+		$('.bxslider-rev').bxSlider({
+			useCSS: false,
+			speed: 200,
+			auto: false,
+			minSlides: 3,
+			maxSlides: 3,
+			slideWidth: 240,
+			slideMargin: 25,
+			responsive: true,
+			infiniteLoop: false,
+		});
+	}
+	$('.bxslider-rev2').bxSlider({
+		useCSS: false,
+		speed: 200,
+		auto: true,
+		minSlides: 3,
+		maxSlides: 3,
+		slideWidth: 300,
+		slideMargin: 30,
+		responsive: true,
+		infiniteLoop: true,
+		controls: false,
+	});	
+	$('.link_to_top a').click(function (e) {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 800);
+		e.preventDefault();
+	});
+	var wwidth = $(window).width();
+	var wwidth = $(window).height();
+	$("a.calBack").click(function(){
+		$(".popup").fadeIn(200);
+		$("#callBack").fadeIn(800);
+		$("#callBack").css('left', $(window).width()/2 - 225.5 );
+		$("#callBack").css('top', $(window).height()/2 - 139 );
+	});
+	$("a.get_consult").click(function(){
+		$(".popup").fadeIn(200);
+		$("#consultation").fadeIn(800);
+	});
+	$(".allClose").click(function(){
+		$(".popup").fadeOut(800)
+		$("#callBack").fadeOut(200);
+		$("#consultation").fadeOut(200);
+	});
+	
+	
+	$(".asking").click(function(){
+		$(".askQuestion").slideToggle(200)
+	});
+	
+	$(".switcher").click(function(){
+		$(".mobileContainer").toggleClass("active")
+	});
+	
+	$(".forGeneral").click(function(){
+		$(".questionBlock").fadeToggle(200)
+	});
+	
+	$(".vcHead").click(function(){
+		$(this).next(".infoBlock").slideToggle(200)
+	});
+	if(typeof $('.fancybox').fancybox != 'undefined'){
+		$('.fancybox').fancybox({
+    		padding: 0,
+    		arrows: true,
+    	});	
+	}
+	if(typeof $('.form_popup').fancybox != 'undefined'){
+	$('.form_popup').fancybox({
+			"padding" : 0,
+			"margin" : 0,	
+		});	
+	}
+
+
+
+
+
+  $('li ul.simple_menu li.active').parent().parent().toggleClass('active');
+  //console.log($('li ul.simple_menu li.active').parent().parent());
+  
+  
+  $('.review-title').click(function(){
+  if($(this).hasClass('active')){
+  $(this).removeClass('active');
+  $('#question').slideUp('slow');
+  }
+  else{
+  $(this).addClass('active');
+  $('#question').slideDown('slow');
+  }
+  });
+  
+  
+
+});
+
+$(document).on('af_complete', function(event, response) {
+    var form = response.form;
+    if ( (form.attr('id') == 'form-faq') || (form.attr('id') == 'form-dscallme_light') ) {
+        
+        if(response.success){
+        	$.fancybox.close();
+        }
+
+    }
+});
+
+(function($){				
+	jQuery.fn.lightTabs = function(options){
+
+		var createTabs = function(){
+			tabs = this;
+			i = 0;
+			
+			showPage = function(i){
+				$(tabs).children("div").children("div").hide();
+				$(tabs).children("div").children("div").eq(i).show();
+				$(tabs).children("ul").children("li").removeClass("active");
+				$(tabs).children("ul").children("li").eq(i).addClass("active");
+			}
+								
+			showPage(0);				
+			
+			$(tabs).children("ul").children("li").each(function(index, element){
+				$(element).attr("data-page", i);
+				i++;                        
+			});
+			
+			$(tabs).children("ul").children("li").click(function(){
+				showPage(parseInt($(this).attr("data-page")));
+			});				
+		};		
+		return this.each(createTabs);
+	};	
+})(jQuery);
+
+
+window.not_view_gift = "NOT_VIEW";
+if($.cookie("gift_hidden") != window.not_view_gift) {
+  $(document).ready(function() {
+
+    $(".b-gift").on("click", function(event) {
+      event.preventDefault();
+      if($(event.target).hasClass('close')) return true;
+      var href = $(this).data("href");
+      if(href.length <= 3) return false;
+
+      $.cookie("gift_hidden",window.not_view_gift, {expires :  1 });
+      document.location = $(this).data('href');
+      return true;
+    });
+
+    $('.b-gift .close').on('click', function(event) {
+      event.preventDefault();
+      $.cookie("gift_hidden",window.not_view_gift, {expires :  1 });
+      $('.b-gift').addClass('hidden');
+    });
+
+    $(".b-gift").removeClass("hidden");
+
+  });
+}

@@ -1,0 +1,27 @@
+<div id="form" class="form__section modal">
+  <div class="form_close modal__close">x</div>
+  <h3>Оставьте заявку</h3>
+  <form action="sendmail.php" method="get" class="form">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="tel" name="tel" placeholder="Ваш телефон" required>
+    <input type="email" name="email" placeholder="Ваш e-mail" required>
+    <textarea rows="2" cols="30" name="textarea" placeholder="Количество питающихся сотрудников"></textarea>
+    <label class="radio">
+      Наличие дотации:
+    <input type="radio" name="dotation" value="yes" checked> Да
+    <input type="radio" name="dotation" value="no"> Нет
+    </label>
+    <label class="radio">
+      Наличие аренды:
+      <input type="radio" name="orenda" value="yes"> Да
+      <input type="radio" name="orenda" value="no" checked> Нет
+    </label>
+    <button type="submit" class="button" name="submit">Отправить</button>
+  </form>
+  <p>Нажимая кнопку, Вы соглашаетесь с <a href="#">политикой конфиденциальности</a>.</p>
+</div>
+<div id="thanks" class="form__section modal">
+  <div class="thanks_close modal__close">x</div>
+  <h3>Спасибо за заказ</h3>
+  <p>Скоро мы Вам перезвоним!</p>
+</div>

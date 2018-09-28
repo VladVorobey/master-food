@@ -1,0 +1,103 @@
+.advantages
+	padding-top: 80px
+	padding-bottom: 133px
+	position: relative
+	+r(992)
+		padding: 60px 0
+	+r(768)
+		padding: 40px 0
+	.title
+		margin-bottom: 80px
+		+r(768)
+			margin-bottom: 30px
+	.colection
+		display: flex
+		flex-direction: row
+		margin-bottom: 120px
+		+r(992)
+			flex-direction: column-reverse
+			margin-bottom: 50px
+		+r(768)
+			margin-bottom: 35px
+		+r(576)
+			margin-bottom: 15px
+		&:last-child
+			margin-bottom: 0
+		&:nth-child(even)
+			flex-direction: row-reverse
+			+r(992)
+				flex-direction: column-reverse
+			.colection__item
+				img
+					padding-left: 0
+					padding-right: 15px
+					+r(992)
+						padding-right: 0
+			.colection__block
+				padding-left: 15px
+				padding-right: 0
+				+r(992)
+					padding-left: 0
+				img
+					padding: 0
+		&__item
+			width: 50%
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			+r(992)
+				width: 100%
+
+			img
+				padding-left: 15px
+				width: 100%
+				+r(992)
+					padding-left: 0
+					margin-bottom: 30px
+				&:nth-child(even)
+					padding-left: 0
+		&__block
+			position: relative
+			padding-right: 15px
+			+r(992)
+				padding-right: 0
+				margin-bottom: 15px
+			img
+				height: 65px
+				width: auto
+				position: absolute
+				top: -30px
+				padding: 0
+				+r(1200)
+					top: 0
+			h3, p
+				padding-left: 100px
+				font-family: $default-font
+				color: $trout
+				+r(1200)
+					padding-left: 80px
+					br
+						display: none
+
+			h3
+				margin-bottom: 15px
+				font-weight: 600
+				font-size: 20px
+				+r(768)
+					font-size: 18px
+				+r(576)
+					font-size: 16px
+			p
+				line-height: 1.6
+				font-weight: 400
+				font-size: 16px
+				+r(768)
+					font-size: 14px
+				+r(576)
+					font-size: 13px
+
+
+
+
+
+
