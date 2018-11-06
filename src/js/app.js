@@ -5,32 +5,17 @@ import '../../node_modules/jquery-popup-overlay/jquery.popupoverlay';
 import '../../node_modules/jquery-validation/dist/jquery.validate.min';
 import '../../node_modules/jquery-mask-plugin/dist/jquery.mask.min';
 
+
 $(document).ready(function() {
+  //---- PRELOADER ----
+  $(window).on('load', function() {
+    $('.preloader').delay(1000).fadeOut('slow');
+  });
   //---- NAV-HAMBURGER ----
   $('.navigation__button, .navigation ul li a').click(function() {
     $('.navigation').toggleClass('active'),
     $('.navigation__button').toggleClass('active');
   });
-  //---- MAP ----
-  ymaps.ready(init);
-  function init() {
-    var myMap = new ymaps.Map('map', {
-      center: [55.774107, 37.530885],
-      zoom: 16
-    });
-    var myPlacemark = new ymaps.Placemark([55.774107, 37.530885], {
-      hintContent: 'г. Москва, 2-й Хорошёвский проезд, дом 9, корпус 2',
-      balloonContent: 'г. Москва, 2-й Хорошёвский проезд, дом 9, корпус 2'
-    });
-    myMap.geoObjects.add(myPlacemark);
-    myMap.controls.remove('searchControl');
-    myMap.controls.remove('routeButton');
-    myMap.controls.remove('trafficControl');
-    myMap.controls.remove('typeSelector');
-    myMap.controls.remove('fullscreenControl');
-    myMap.controls.remove('rulerControl');
-    myMap.controls.remove('button');
-  };
   //---- TABS ----
   $('.tabs__wrap').hide();
   $('.tabs__wrap:nth-child(2)').show();
@@ -116,7 +101,7 @@ $(document).ready(function() {
       event.preventDefault();
       $('html, body').stop().animate({
         scrollTop: target.offset().top
-      }, 1000);
+      }, 2000);
     }
   });
   //---- MASK+ VALIDATION ----
@@ -140,6 +125,7 @@ $(document).ready(function() {
         name: 'Введите Ваше имя',
         tel: 'Введите Ваш телефон',
         email: 'Введите Ваш E-mail',
+        date: 'Выберите удобную дату',
       },
       submitHandler: function(form) {
         var t = $('.form-' + index).serialize();
@@ -162,12 +148,15 @@ $(document).ready(function() {
       url: 'sendmail.php',
       data: data,
       success: function() {
-        $('#form').popup('hide');
+        $('.modal').popup('hide');
         $('#thanks').popup('show');
         setTimeout(function() {
           $(formName).trigger('reset');
         }, 2000);
       }
     });
-  };
+  }
 });
+//---- MAP ----
+
+
